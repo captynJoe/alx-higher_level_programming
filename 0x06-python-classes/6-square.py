@@ -1,5 +1,5 @@
 #!/usr/bin/python
-Squaare generation module for Python project 0x06
+Square generation module for Python project 0x06
 """
 
 
