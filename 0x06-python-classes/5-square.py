@@ -1,58 +1,75 @@
-#!usr/bin/python3
-"""Defines a class Square"""
+#!/usr/bin/python3
+"""Square generation module for Python project 0x06
+"""
 
 
 class Square:
-    """
-    Class that defines properties of square by: (based on 4-square.py).
+    """Class defined for square generation.
+
+    Args:
+        size (int): length of one side of square
 
     Attributes:
-        size: size of a square (1 side).
+        __size (int): length of one side of square
+
     """
+
     def __init__(self, size=0):
-        """Creates new instances of square.
-
-        Args:
-            size: size of the square (1 side).
-        """
-        self.__size = size
-
-    def area(self):
-        """Calculates the area of square.
-
-        Returns: the current square area.
-        """
-        return self.__size ** 2
+        # attribute assigment here engages setters defined below
+        self.size = size
 
     @property
     def size(self):
-        """Returns the size of a square
+        """__size getter, setter with same method name
+
+        Returns:
+            __size (int): length of one side, squared
+
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Property setter for size.
+        """Args:
+            value (int): length of one side of square
 
-        Args:
-            value (int): size of a square (1 side).
+        Attributes:
+            __size (int): length of one side of square
 
         Raises:
-            TypeError: size must be an integer
-            ValueError: size must be >= 0
+            TypeError: if value is not an integer
+            ValueError: if value is less than 0
+
         """
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        if value < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = value
+
+    def area(self):
+        """Calulates area of square.
+
+        Attributes:
+            __size (int): length of one side of square
+
+        Returns:
+            area (int): length of one side, squared
+
+        """
+        area = self.__size * self.__size
+        return area
 
     def my_print(self):
-        """prints in stdout the square with the character #
-        """
+        """Prints text representation of square in hash chars.
 
-        if self.__size == 0:
+        Attributes:
+            __size (int): length of one side of square
+
+        """
+        for row in range(0, self.__size):
+            for col in range(0, self.__size):
+                print("#", end="")
             print()
-        for i in range(self.__size):
-            print("#" * (self.__size))
+        if self.__size is 0:
+            print()
