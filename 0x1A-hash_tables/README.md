@@ -1,13 +1,6 @@
 # Project Name
 **0x1A. C - Hash tables**
 
-## Author's Details
-Name: *Wendy Munyasi.*
-
-Email: *wendymunyasi@gmail.com*
-
-Tel: *+254707240068.*
-
 ##  Requirements
 *   Allowed editors: `vi`, `vim`, `emacs`.
 *   All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
@@ -38,7 +31,3 @@ What are the most common use cases of hash tables.
 * **6. >>> del ht** - Write a function that deletes a hash table. - `6-hash_table_delete.c`.
 * **7. $ht['Betty'] = 'Cool'** - Rewrite the previous functions using the given data structures. - `100-sorted_hash_table.c`.
 
-
-## Collaborate
-
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
